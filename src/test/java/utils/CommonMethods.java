@@ -26,8 +26,8 @@ public class CommonMethods extends PageIntializer {
 
             case "Chrome":
                 ChromeOptions options = new ChromeOptions();
-                options.addArguments("--headless");
-                driver=new ChromeDriver();
+                options.setHeadless(true);
+                driver=new ChromeDriver(options);
                 break;
             case "FireFox":
                 driver=new FirefoxDriver();
